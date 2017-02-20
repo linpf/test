@@ -1,0 +1,18 @@
+<h1>Login</h1>
+<%= form_for(:user, url: sessions_path) do |f| %>
+<div class="field  form-group">
+<%= f.label :username ,class: 'col-sm-2 control-label'%> <br/>
+<%= f.text_field :username , class: 'form-control'%>
+</div>
+<p/>
+<div class="field  form-group">
+<%= f.label :password ,class: 'col-sm-2 control-label'%> <br/>
+<%= f.password_field :password , class: 'form-control'%>
+</div>
+<p/>
+<div class="actions form-group">
+    <div class="col-sm-10">
+      <%= f.submit 'Login', :class => 'btn btn-primary'%>
+    </div>
+</div>
+<% end %>

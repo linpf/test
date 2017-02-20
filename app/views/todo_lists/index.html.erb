@@ -1,0 +1,29 @@
+
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>List name</th>
+      <th>List due date</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todo_lists.each do |todo_list| %>
+      <tr>
+        <td><%= link_to todo_list.list_name, todo_list %></td>
+        <td><%= todo_list.list_due_date %></td>
+        <td><%= link_to 'Edit', edit_todo_list_path(todo_list), class: "btn btn-xs btn-warning" %></td>
+        <td><%= link_to 'Delete', todo_list, method: :delete, class: "btn btn-xs btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<div class="apple_pagination">
+
+<%= will_paginate @todo_lists, :container => false %>
+
+</div>
+
