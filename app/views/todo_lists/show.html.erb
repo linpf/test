@@ -1,11 +1,10 @@
-<div class="container">
 
-<header>
+
   <h2>
   <%= "#{@todo_list.list_name} (#{@todo_list.list_due_date})" %>
   <%= link_to "Edit", edit_todo_list_path(@todo_list) , class: 'btn btn-warning' %>
   </h2>
-</header>
+
 
 <table class="table table-striped table-hover table-bordered table-condensed">
 
@@ -39,5 +38,3 @@
 
 <%= link_to 'New Todo Item', new_todo_list_todo_item_path(@todo_list) , class: 'btn btn-success' %>
 
-
-</div>
