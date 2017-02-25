@@ -12,41 +12,40 @@
   <% end %>
 
   <div class="field form-group">
-    <%= f.label :title, class: 'col-sm-1 control-label'%>
-    <div class="col-sm-11">
-      <%= f.text_field :title , class: 'form-control'%>
+    <%= f.label :title, class: 'col-xs-2 control-label'%>
+    <div class="col-xs-10">
+      <%= f.text_field :title , class: 'form-control'%><br>
+    </div>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :description , class: 'col-xs-2 control-label'%>
+    <div class="col-xs-10">
+      <%= f.text_area :description , class: 'form-control'%><br>
     </div>
   </div>
 
 
+
   <div class="field form-group">
-    <%= f.label :description , class: 'col-sm-1 control-label'%>
-    <div class="col-sm-11">
-      <%= f.text_area :description , class: 'form-control'%>
+    <%= f.label :due_date , class: 'col-xs-2 control-label'%>
+    <div class="col-xs-10">
+      <%= f.date_select :due_date , class: 'form-control'%><br><br>
     </div>
   </div>
 
   <% if @todo_item.persisted? %>
   <div class="field form-group">
-    <%= f.label :completed,  class: 'col-sm-1 control-label'%>
-    <div class="col-sm-11">
-      <%= f.check_box :completed , class: 'form-control'%>
+    <%= f.label :completed,  class: 'col-xs-2 control-label'%>
+    <div class="col-xs-10">
+      <%= f.check_box :completed , class: 'form-control'%><br>
     </div>
   </div>
   <% end %>
 
-  <div class="field form-group">
-    <%= f.label :due_date , class: 'col-sm-1 control-label'%>
-    <div class="col-sm-11">
-      <%= f.date_select :due_date , class: 'form-control'%>
-    </div>
-  </div>
-
-  &nbsp;
-
   <div class="actions form-group">
-    <div class="col-sm-offset-1 col-sm-11">
-      <%= f.submit nil, :class => 'btn btn-primary'%>  &nbsp;
+    <div class="col-xs-offset-2 col-xs-10">
+      <%= f.submit nil, :class => 'btn btn-primary'%>
       <%= link_to 'Cancel', @todo_list , class: 'btn btn-warning' %>
     </div>
   </div>
