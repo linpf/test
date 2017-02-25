@@ -17,10 +17,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body { padding-top: 70px; }
 
 #notice  { color: green; }
 #alert   { color: red; }
 
+div.form-group {  margin-bottom: 20px; }
 
 .apple_pagination {
   background: #f1f1f1;

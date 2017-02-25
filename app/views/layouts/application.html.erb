@@ -8,17 +8,15 @@
 </head>
 <body>
 
-<%= render 'shared/navigation' %>
+<%= render 'shared/navbar' %>
 
-<div class="container">
+<div class="container-fluid">
 
+  <% flash.each do |key, value| %>
+    <p id='<%= key %>'><%= value %></p>
+  <% end %>
 
-
-<% flash.each do |key, value| %>
-  <p id='<%= key %>'><%= value %></p>
-<% end %>
-
-<%= yield %>
+  <%= yield %>
 
 </div>
 

@@ -20,7 +20,7 @@
 
   <tbody>
     <% @todo_list.todo_items.each do |todo_item| %>
-      <tr>
+      <tr class=<%= cycle('success', 'warning') %>>
         <td><%= todo_item.title %></td>
         <td><%= todo_item.due_date %></td>
         <td><%= todo_item.description %></td>
